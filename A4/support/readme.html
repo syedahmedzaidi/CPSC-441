@@ -1,0 +1,75 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ffserver</title>
+</head>
+
+<body topmargin="100" leftmargin="100">
+
+<p><font size="4">Assignment 4</font></p>
+<p><font size="4">Author: Majid Ghaderi<br>
+Email: <font face="Courier">mghaderi@cs.ucalgary.ca</font></font></p>
+<p>&nbsp;</p>
+<p><font size="4">Note: First, start the relay server. Then, start routers. <br>
+A topology file is needed to start the server.</font></p>
+<p>&nbsp;</p>
+<p><font size="4">Running the Relay Server:<br>
+==============<br>
+Use the following command <br>
+<br>
+&nbsp;&nbsp;&nbsp; <font face="Courier">java -jar rserver.jar<br>
+</font><br>
+to start the server. To stop the server, type &quot;quit&quot; on the screen. To 
+change the<br>
+network topology, type &quot;update&quot; on the screen. In response to command &quot;update&quot;,<br>
+the relay server cycles through the list of topologies defined in the topology 
+file. If<br>
+it reaches the last topology then it moves back to the first topology. <br>
+<br>
+Using the above command, the server starts with a set of default parameters. <br>
+Specifically, it assumes that the topology file name is &quot;<font face="Courier">topology.txt</font>&quot;.<br>
+You can run the server in the following modes to specify your own parameters.<br>
+<br>
+1) Non-verbose Mode:<br>
+<br>
+<font face="Courier">&nbsp;&nbsp;&nbsp; java -jar rserver.jar port topology loss</font><br>
+<br>
+where,</font></p>
+<blockquote>
+	<p><font size="4"><font face="Courier">port</font>: the server local port 
+	number.<br>
+	<br>
+	<font face="Courier">topology</font>: the name of the topology file. </font></p>
+	<p><font size="4"><font face="Courier">loss</font>: the packet loss probability 
+	at the server. </font></p>
+	<blockquote>
+		<p><font size="4">It specifies the ratio of lost packets at the server. 
+		The server randomly <br>
+		drops arriving packets. The probability that the server drops a packet
+		<br>
+		is given by this parameter.<br>
+&nbsp;</font></p>
+	</blockquote>
+</blockquote>
+<p><font size="4">2) Verbose Mode:<br>
+<br>
+<font face="Courier">&nbsp;&nbsp;&nbsp; java -jar rserver.jar -v port topology 
+loss</font><br>
+&nbsp;</font></p>
+<blockquote>
+	<p><font size="4">By specifying the option '<font face="Courier">-v</font>', 
+	the server works in verbose mode, where<br>
+	it prints detailed information regarding received routing packets.</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font size="4">No Software is Bug-Free!<br>
+========================<br>
+If you discover a critical bug in the server, let me know to fix it. <br>
+You should however treat the server nicely or it may crash!<br>
+&nbsp;</font></p>
+
+</body>
+
+</html>
