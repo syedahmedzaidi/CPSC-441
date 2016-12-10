@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>ffserver</title>
+</head>
+
+<body topmargin="100" leftmargin="100">
+
+<p><font size="4">Fast Ftp Server 1.1</font></p>
+<p><font size="4">Author: Majid Ghaderi<br>
+Email: <font face="Courier">mghaderi@cs.ucalgary.ca</font></font></p>
+<p>&nbsp;</p>
+<p><font size="4">Running the server:<br>
+==============<br>
+Use the following command <br>
+<br>
+&nbsp;&nbsp;&nbsp; <font face="Courier">java -jar ffserver.jar<br>
+</font><br>
+to start the server. To stop the server, type &quot;quit&quot; on the screen.<br>
+<br>
+Using the above command, the server starts with a set of default parameters. <br>
+You can run the server in the following modes to specify your own parameters.<br>
+<br>
+1) Non-verbose Mode:<br>
+<br>
+<font face="Courier">&nbsp;&nbsp;&nbsp; java -jar ffserver.jar port delay loss</font><br>
+<br>
+where,</font></p>
+<blockquote>
+	<p><font size="4"><font face="Courier">port</font>: the server local port 
+	number.<br>
+	<br>
+	<font face="Courier">delay</font>: the average ACK delay. </font></p>
+	<blockquote>
+		<p><font size="4">The server uses this parameter to wait for some random 
+		delay before <br>
+		sending each ACK. The actual delay is generated randomly so that the <br>
+		average delay is equal to this parameter.</font></p>
+	</blockquote>
+	<p><font size="4"><br>
+	<font face="Courier">loss</font>: the segment loss probability. </font></p>
+	<blockquote>
+		<p><font size="4">It specifies the ratio of lost segments at the server. 
+		The server randomly <br>
+		drops arriving segments. The probability that the server drops a segment
+		<br>
+		is given by this parameter.<br>
+&nbsp;</font></p>
+	</blockquote>
+</blockquote>
+<p><font size="4">2) Verbose Mode:<br>
+<br>
+<font face="Courier">&nbsp;&nbsp;&nbsp; java -jar ffserver.jar -v port delay 
+loss</font><br>
+&nbsp;</font></p>
+<blockquote>
+	<p><font size="4">By specifying the option '<font face="Courier">-v</font>', 
+	the server works in verbose mode, where<br>
+	it prints detailed information regarding received segments and transmitted<br>
+	ACKs.</font></p>
+</blockquote>
+<p>&nbsp;</p>
+<p><font size="4">Running the client<br>
+==============<br>
+Use the following command <br>
+<br>
+&nbsp;&nbsp;&nbsp; <font face="Courier">java -jar fastftp.jar file<br>
+</font><br>
+where, <font face="Courier">file</font> specifies the file name to be 
+transferred to the server. If it is desired to<br>
+specify other options as well, then use the full command as follows:<br>
+<br>
+&nbsp;&nbsp;&nbsp; <font face="Courier">java -jar fastftp.jar server port file 
+window timeout<br>
+</font><br>
+where, </font></p>
+<blockquote>
+	<p><font size="4"><font face="Courier">server</font>: server name.<br>
+	<br>
+	<font face="Courier">port</font>: server port number.</font></p>
+	<p><font size="4"><font face="Courier">file</font>: file to be trasnferred. </font></p>
+	<p><font size="4"><font face="Courier">window</font>: the window size (in 
+	segments)<br>
+	<br>
+	<font face="Courier">timeout</font>: value of timeout for the retransmission 
+	timer (in milli-seconds)</font></p>
+</blockquote>
+<p><font size="4"><br>
+No Software is Bug-Free!<br>
+========================<br>
+If you discover a critical bug in the server, let me know to fix it. <br>
+You should however treat the server nicely or it may crash!<br>
+&nbsp;</font></p>
+
+</body>
+
+</html>
